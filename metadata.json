@@ -1,0 +1,6 @@
+{
+  "name": "RoboStudioX",
+  "version": "R1",
+  "description": "A high-fidelity industrial robotic arm simulator capable of parsing URDF models, visualizing kinematics in real-time 3D, and utilizing Gemini AI for code generation and kinematic analysis.",
+  "requestFramePermissions": []
+}
