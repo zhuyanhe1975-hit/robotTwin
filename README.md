@@ -1,20 +1,23 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# RoboStudioX
 
-# Run and deploy your AI Studio app
+工业机器人数字孪生体. Visualize an industrial robot from URDF, jog joints, and play Cartesian trajectories in the browser.
 
-This contains everything you need to run your app locally.
+**Live site:** https://zhuyanhe1975-hit.github.io/robotTwin/
 
-View your app in AI Studio: https://ai.studio/apps/drive/1F0ucSWUZ_Ao_XxGTJ8yIv1wz8SO8XQu6
+GitHub Actions builds this Vite app and deploys it to GitHub Pages on every push to `main`. The published site does not include a Gemini API key. The 3D twin, URDF loading, and local kinematics run without one. AI task planning is optional and only uses a key you keep in an untracked `.env.local` while developing locally.
 
-## Run Locally
+View the app in AI Studio: https://ai.studio/apps/drive/1F0ucSWUZ_Ao_XxGTJ8yIv1wz8SO8XQu6
 
-**Prerequisites:**  Node.js
+## Enable GitHub Pages
 
+After the workflow is on `main`, open **Settings → Pages → Build and deployment** and set **Source** to **GitHub Actions**. Then re-run the **Deploy to GitHub Pages** workflow. That publishes https://zhuyanhe1975-hit.github.io/robotTwin/.
+
+## Run locally
+
+**Prerequisites:** Node.js
 
 1. Install dependencies:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+2. Optional: create `.env.local` and set `GEMINI_API_KEY` to your Gemini API key. Do not commit `.env`, `.env.local`, or any API key. Leave this unset to run without AI planning.
 3. Run the app:
    `npm run dev`
